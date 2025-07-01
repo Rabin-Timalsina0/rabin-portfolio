@@ -1,33 +1,49 @@
-import { Box, Flex, Link, Button, Text, IconButton, useDisclosure, VStack, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerBody, Image } from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
-import SocialLinks from './SocialLinks'
+import {
+  Box,
+  Flex,
+  Link,
+  Button,
+  Text,
+  IconButton,
+  useDisclosure,
+  VStack,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerBody,
+  Image,
+} from "@chakra-ui/react";
+import { HamburgerIcon } from "@chakra-ui/icons";
+import SocialLinks from "./SocialLinks";
 
 const Navbar = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
-      const offset = 70 // height of navbar
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY
+      const offset = 70; // height of navbar
+      const elementPosition =
+        element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
         top: elementPosition - offset,
-        behavior: 'smooth'
-      })
+        behavior: "smooth",
+      });
     }
-    onClose()
-  }
+    onClose();
+  };
 
   const NavLink = ({ children, to }) => (
     <Link
       onClick={() => scrollToSection(to)}
       fontWeight="medium"
       cursor="pointer"
-      _hover={{ color: 'blue.500' }}
+      _hover={{ color: "blue.500" }}
     >
       {children}
     </Link>
-  )
+  );
 
   return (
     <Box
@@ -49,21 +65,14 @@ const Navbar = () => {
         mx="auto"
         px={6}
       >
-        <Flex 
-          onClick={() => scrollToSection('home')}
+        <Flex
+          onClick={() => scrollToSection("home")}
           cursor="pointer"
           align="center"
           gap={3}
         >
-          <Image
-            src="/logo1.png"
-            alt="Rabin Timalsina Logo"
-            h={{ base: "30px", md: "35px" }}
-            w="auto"
-            objectFit="contain"
-          />
-          <Text 
-            bgGradient="linear(to-r, blue.500, blue.800)" 
+          <Text
+            bgGradient="linear(to-r, blue.500, blue.800)"
             bgClip="text"
             fontSize="2xl"
             fontWeight="bold"
@@ -76,14 +85,14 @@ const Navbar = () => {
         <Flex
           alignItems="center"
           gap={8}
-          display={{ base: 'none', md: 'flex' }}
+          display={{ base: "none", md: "flex" }}
         >
           <NavLink to="home">Home</NavLink>
           <NavLink to="projects">Projects</NavLink>
           <NavLink to="certifications">Certifications</NavLink>
           <NavLink to="reviews">Reviews</NavLink>
           <Button
-            onClick={() => scrollToSection('contact')}
+            onClick={() => scrollToSection("contact")}
             colorScheme="blue"
             size="sm"
           >
@@ -93,7 +102,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation Button */}
         <IconButton
-          display={{ base: 'flex', md: 'none' }}
+          display={{ base: "flex", md: "none" }}
           onClick={onOpen}
           icon={<HamburgerIcon />}
           variant="ghost"
@@ -113,7 +122,7 @@ const Navbar = () => {
                 <NavLink to="certifications">Certifications</NavLink>
                 <NavLink to="reviews">Reviews</NavLink>
                 <Button
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => scrollToSection("contact")}
                   colorScheme="blue"
                   w="full"
                 >
@@ -126,7 +135,7 @@ const Navbar = () => {
         </Drawer>
       </Flex>
     </Box>
-  )
-}
+  );
+};
 
-export default Navbar 
+export default Navbar;
