@@ -117,7 +117,7 @@ const Navbar = () => {
             <DrawerCloseButton />
             <DrawerBody>
               <VStack spacing={8} pt={16} align="stretch">
-                <NavLink to="home">Home</NavLink>
+                <NavLink to="homeie">Home</NavLink>
                 <NavLink to="projects">Projects</NavLink>
                 <NavLink to="certifications">Certifications</NavLink>
                 <NavLink to="reviews">Reviews</NavLink>
