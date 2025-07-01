@@ -77,7 +77,7 @@ const Navbar = () => {
             fontSize="2xl"
             fontWeight="bold"
           >
-            Rabin Gracias
+            Rabin Timalsina
           </Text>
         </Flex>
 

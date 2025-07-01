@@ -1,6 +1,6 @@
 # AI Engineer Portfolio
 
-A modern, responsive portfolio website built with React and Vite, showcasing AI chatbot development services and solutions.
+A modern, responsive portfolio website built with React and Vite, showcasing development services and solutions.
 
 ## Tech Stack
 
@@ -13,7 +13,9 @@ A modern, responsive portfolio website built with React and Vite, showcasing AI 
 ## Deployment
 
 git add .
+
 git commit -m "Updated something"
+
 git push origin main
 
 npm run deploy
