@@ -77,7 +77,7 @@ const Navbar = () => {
             fontSize="2xl"
             fontWeight="bold"
           >
-            Rabin Timalsina
+            Rabin Tims
           </Text>
         </Flex>
 
@@ -117,7 +117,7 @@ const Navbar = () => {
             <DrawerCloseButton />
             <DrawerBody>
               <VStack spacing={8} pt={16} align="stretch">
-                <NavLink to="homeie">Home</NavLink>
+                <NavLink to="home">Home</NavLink>
                 <NavLink to="projects">Projects</NavLink>
                 <NavLink to="certifications">Certifications</NavLink>
                 <NavLink to="reviews">Reviews</NavLink>
