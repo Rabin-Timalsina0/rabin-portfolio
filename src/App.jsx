@@ -39,17 +39,17 @@ function App() {
       <Box minH="100vh">
         <Navbar />
         <Routes>
-          <Route path="/portfolio" element={<MainLayout />} />
+          <Route path="/rabin-portfolio" element={<MainLayout />} />
           <Route
-            path="/portfolio/projects/ecommerce-assistant"
+            path="/rabin-portfolio/projects/ecommerce-assistant"
             element={<EcommerceAssistant />}
           />
           <Route
-            path="/portfolio/projects/healthcare-bot"
+            path="/rabin-portfolio/projects/healthcare-bot"
             element={<HealthcareBot />}
           />
           <Route
-            path="/portfolio/projects/financial-advisor-bot"
+            path="/rabin-portfolio/projects/financial-advisor-bot"
             element={<FinancialAdvisorBot />}
           />
         </Routes>
